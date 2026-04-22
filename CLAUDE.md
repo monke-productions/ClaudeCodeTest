@@ -25,6 +25,17 @@ The entire app is a single self-contained file (`tictactoe.html`) with no extern
 
 ## Git workflow
 
-- Commit after each meaningful change with a concise message describing *what changed and why*
-- Push to `origin/main` after each commit to keep GitHub in sync
-- Use `git log --oneline` to review history before starting new work
+After every meaningful unit of work — a feature added, a bug fixed, a refactor completed — commit and push immediately. Do not batch multiple unrelated changes into one commit. The goal is that GitHub always reflects the latest working state so work is never lost and any change can be reverted cleanly.
+
+Commit message format:
+- Subject line: short imperative phrase describing what changed (`Fix win detection for diagonal lines`)
+- If the why is non-obvious, add a blank line then a brief body sentence
+- Always push to `origin/main` after committing
+
+```bash
+git add <files>
+git commit -m "Your message here"
+git push
+```
+
+Use `git log --oneline` to review history before starting new work.
